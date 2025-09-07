@@ -47,29 +47,25 @@
 
   <!-- HERO -->
   <section class="relative bg-gradient-to-b from-sky-50 to-white">
-    <div class="container mx-auto px-6 py-20 grid md:grid-cols-2 gap-12 items-center">
-      <div class="text-center md:text-left">
-        <h1 class="text-5xl md:text-6xl font-bold leading-tight text-[rgb(var(--ink))]">
-          Construa a <span class="text-sky-600">ponte</span> para o próximo nível
-        </h1>
-        <p class="mt-6 text-lg text-neutral-700 max-w-xl mx-auto md:mx-0">
-          Eu sou <strong>Suzam Simony</strong>, consultora empresarial. Minha missão é transformar suas metas em resultados claros: mais caixa, mais margem e mais tranquilidade para crescer.
-        </p>
-        <div class="mt-8 flex flex-wrap gap-4 justify-center md:justify-start">
-          <a href="#contato" class="px-6 py-3 bg-[rgb(var(--ink))] text-white rounded-lg font-medium soft-shadow">Quero atravessar</a>
-          <a href="#sobre" class="px-6 py-3 border border-neutral-300 rounded-lg font-medium hover:border-neutral-400">Saiba mais</a>
+    <div class=\"container mx-auto px-6 py-20 grid gap-12 items-center\">
+      <!-- Imagem primeiro no mobile -->
+      <div class=\"order-1 md:order-2\">
+        <div class=\"relative aspect-[4/3] rounded-3xl overflow-hidden soft-shadow border border-black/5\">
+          <img src=\"ponte.jpeg\" alt=\"Ponte — Suzam Simony\" class=\"w-full h-full object-cover\"/>
+          <div class=\"absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent\"></div>
+          <div class=\"absolute bottom-4 left-4 grid place-items-center w-14 h-14 md:w-16 md:h-16 rounded-full bg-[rgb(var(--ink))]/90 text-white font-bold tracking-tight\">SS</div>
         </div>
       </div>
-      <div class="relative">
-        <!-- Ponte estética -->
-        <div class="relative aspect-[4/3] rounded-3xl overflow-hidden soft-shadow border border-black/5">
-          <img src="ponte.jpeg" alt="Ponte — Suzam Simony" class="w-full h-full object-cover"/>
-          <!-- overlay degradê leve -->
-          <div class="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
-          <!-- logo/monograma sobre a foto -->
-          <div class="absolute bottom-4 left-4 grid place-items-center w-14 h-14 md:w-16 md:h-16 rounded-full bg-[rgb(var(--ink))]/90 text-white font-bold tracking-tight">
-            SS
-          </div>
+      <div class=\"order-2 md:order-1 text-center md:text-left\">
+        <h1 class=\"text-5xl md:text-6xl font-bold leading-tight text-[rgb(var(--ink))]\">
+          Construa a <span class=\"text-sky-600\">ponte</span> para o próximo nível
+        </h1>
+        <p class=\"mt-6 text-lg text-neutral-700 max-w-xl mx-auto md:mx-0\">
+          Eu sou <strong>Suzam Simony</strong>, consultora empresarial. Minha missão é transformar suas metas em resultados claros: mais caixa, mais margem e mais tranquilidade para crescer.
+        </p>
+        <div class=\"mt-8 flex flex-wrap gap-4 justify-center md:justify-start\">
+          <a href=\"#contato\" class=\"px-6 py-3 bg-[rgb(var(--ink))] text-white rounded-lg font-medium soft-shadow\">Quero atravessar</a>
+          <a href=\"#sobre\" class=\"px-6 py-3 border border-neutral-300 rounded-lg font-medium hover:border-neutral-400\">Saiba mais</a>
         </div>
       </div>
     </div>
@@ -87,8 +83,8 @@
         <p class="mt-2 text-neutral-600 text-base">da auditoria ao plano de execução</p>
       </div>
       <div class="p-6 rounded-2xl bg-white soft-shadow hover:scale-105 transition-transform">
-        <div class="text-[clamp(2rem,5vw,3.25rem)] font-extrabold text-ink leading-tight">R$ 1 → R$ 3</div>
-        <p class="mt-2 text-neutral-600 text-base">cada real investido deve retornar três</p>
+        <div class="text-[clamp(2rem,5vw,3.25rem)] font-extrabold text-ink leading-tight"><span class=\"inline-block\">R$ 1 → R$ 3</span></div>
+        <p class=\"mt-2 text-neutral-600 text-base\">cada real investido deve retornar três</p>
       </div>
       <div class="p-6 rounded-2xl bg-white soft-shadow hover:scale-105 transition-transform">
         <div class="text-[clamp(2rem,5vw,3.25rem)] font-extrabold text-ink leading-tight">OTIF 95%+</div>
