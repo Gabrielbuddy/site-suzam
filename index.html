@@ -7,16 +7,25 @@
   <meta name="description" content="Assessoria estratégica, finanças e operações para PMEs. Da margem atual ao outro lado do resultado — eu desenho e conduzo a ponte." />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%230a2540'/%3E%3Ctext x='50' y='58' font-size='44' text-anchor='middle' fill='white' font-family='Arial, Helvetica, sans-serif'%3ESS%3C/text%3E%3C/svg%3E"/>
   <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    :root{
-      --ink: 10 37 64;
-      --sky: 14 165 233;
-      --sand: 245 245 244;
-      --accent: 234 88 12;
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'] },
+          colors: { ink: 'rgb(10 37 64)', skybrand: 'rgb(14 165 233)' }
+        }
+      }
     }
-    .soft-shadow{ box-shadow: 0 10px 25px -10px rgba(2, 8, 23, .25); }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <style>
+    :root{ --ink: 10 37 64; --sky: 14 165 233; --sand: 245 245 244; --accent: 234 88 12; }
+    .soft-shadow{ box-shadow: 0 16px 40px -18px rgba(2, 8, 23, .25); }
     .glass{ backdrop-filter: saturate(140%) blur(8px); background: rgba(255,255,255,.6); }
-    .container{max-width:1100px}
+    .container{max-width:1160px}
+    @keyframes float { 0%{transform:translateY(0)} 50%{transform:translateY(-3px)} 100%{transform:translateY(0)} }
+    @keyframes shimmer { 0%{opacity:.75} 50%{opacity:1} 100%{opacity:.75} }
+    @keyframes waveMove { 0%{transform:translateX(0)} 100%{transform:translateX(-160px)} }
   </style>
 </head>
 <body class="bg-neutral-50 text-neutral-900">
@@ -36,8 +45,8 @@
     <div class="container mx-auto px-4 pt-16 pb-20 grid md:grid-cols-2 gap-10 items-center">
       <div>
         <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-100 text-sky-700 text-xs font-medium mb-6">De A ➝ B com segurança</div>
-        <h1 class="text-5xl md:text-6xl font-bold leading-tight text-[rgb(var(--ink))] text-center">
-          Construa sua <span class="text-sky-600">ponte</span> para o próximo nível
+        <h1 class="text-[clamp(2.4rem,6vw,3.75rem)] md:text-[clamp(3rem,5.5vw,4.5rem)] font-extrabold leading-[1.05] tracking-tight text-ink text-center">
+          $1
         </h1>
         <p class="mt-6 text-neutral-700 text-lg text-center">
           Eu sou <strong>Suzam Simony</strong>, consultora empresarial. Transformo metas em rotas — e rotas em resultados. Da sua margem atual ao outro lado, eu projeto e conduzo a ponte com estratégia, finanças e execução disciplinada.
@@ -82,7 +91,7 @@
   <!-- FRASES -->
   <section id="frases" class="bg-gradient-to-b from-white to-sky-50 border-y border-black/5">
     <div class="container mx-auto px-4 py-16 text-center">
-      <h2 class="text-4xl md:text-5xl font-bold text-[rgb(var(--ink))]">Frases que me guiam</h2>
+      <h2 class="text-[clamp(1.8remFrases que me guiam</h2>
       <ul class="mt-8 space-y-4 text-lg text-neutral-800">
         <li>“Do faturamento ao lucro: pare de atravessar no improviso.”</li>
         <li>“Sua empresa pode até vender; eu garanto que ela chegue inteira ao outro lado.”</li>
