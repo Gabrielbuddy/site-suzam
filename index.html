@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Suzam Simony — Consultora Empresarial | Construa sua ponte para o próximo nível</title>
+  <meta name="description" content="Assessoria estratégica, finanças e operações para PMEs. Da margem atual ao outro lado do resultado — eu desenho e conduzo a ponte." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%230a2540'/%3E%3Ctext x='50' y='58' font-size='44' text-anchor='middle' fill='white' font-family='Arial, Helvetica, sans-serif'%3ESS%3C/text%3E%3C/svg%3E"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root{
+      --ink: 10 37 64;       /* azul petróleo */
+      --sky: 14 165 233;     /* azul claro */
+      --sand: 245 245 244;   /* cinza quente */
+      --accent: 234 88 12;   /* laranja */
+    }
+    .soft-shadow{ box-shadow: 0 10px 25px -10px rgba(2, 8, 23, .25); }
+    .glass{ backdrop-filter: saturate(140%) blur(8px); background: rgba(255,255,255,.6); }
+    .container{max-width:1100px}
+  </style>
+</head>
+<body class="bg-neutral-50 text-neutral-900">
+  <!-- NAV -->
+  <header class="sticky top-0 z-50 bg-white/80 glass border-b border-black/5">
+    <nav class="container mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="#top" class="flex items-center gap-3">
+        <span class="grid place-items-center w-10 h-10 rounded-full bg-[rgb(var(--ink))] text-white font-bold tracking-tight">SS</span>
+        <span class="font-semibold text-[rgb(var(--ink))]">Suzam Simony <span class="opacity-60">Consultoria</span></span>
+      </a>
+      <ul class="hidden md:flex items-center gap-8 text-sm">
+        <li><a href="#servicos" class="hover:text-[rgb(var(--ink))]">Serviços</a></li>
+        <li><a href="#metodo" class="hover:text-[rgb(var(--ink))]">Método</a></li>
+        <li><a href="#cases" class="hover:text-[rgb(var(--ink))]">Cases</a></li>
+        <li><a href="#sobre" class="hover:text-[rgb(var(--ink))]">Sobre</a></li>
+      </ul>
+      <div class="hidden md:block">
+        <a href="#contato" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[rgb(var(--ink))] text-white soft-shadow hover:opacity-90">
+          <span>Agendar conversa</span>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4 fill-current"><path d="M13.172 12 8.222 7.05l1.414-1.414L16 12l-6.364 6.364-1.414-1.414z"/></svg>
+        </a>
+      </div>
+      <button class="md:hidden" id="menuBtn" aria-label="Abrir menu">
+        <svg class="w-7 h-7" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </nav>
+    <div id="mobileMenu" class="md:hidden hidden border-t border-black/5">
+      <ul class="px-4 py-3 grid gap-3 bg-white">
+        <li><a href="#servicos" class="block py-2">Serviços</a></li>
+        <li><a href="#metodo" class="block py-2">Método</a></li>
+        <li><a href="#cases" class="block py-2">Cases</a></li>
+        <li><a href="#sobre" class="block py-2">Sobre</a></li>
+        <li><a href="#contato" class="block py-2 font-semibold text-[rgb(var(--ink))]">Agendar conversa</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="top" class="relative overflow-hidden">
+    <div class="absolute inset-0 -z-10 bg-gradient-to-b from-white via-sky-50 to-white"></div>
+    <div class="container mx-auto px-4 pt-16 pb-20 grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-100 text-sky-700 text-xs font-medium mb-6">De A ➝ B com segurança</div>
+        <h1 class="text-4xl md:text-5xl font-semibold leading-tight text-[rgb(var(--ink))]">
+          Construa sua <span class="text-sky-600">ponte</span> para o próximo nível
+        </h1>
+        <p class="mt-4 text-neutral-700 text-lg">
+          Eu sou <strong>Suzam Simony</strong>, consultora empresarial. Transformo metas em rotas — e rotas em resultados. Da sua margem atual ao outro lado, eu projeto e conduzo a ponte com estratégia, finanças e execução disciplinada.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="#contato" class="px-5 py-3 rounded-xl bg-[rgb(var(--ink))] text-white soft-shadow">Quero atravessar</a>
+          <a href="#servicos" class="px-5 py-3 rounded-xl border border-neutral-300 hover:border-neutral-400">Ver como funciona</a>
+        </div>
+        <p class="mt-4 text-sm text-neutral-500">Primeira conversa de diagnóstico, sem custo.</p>
+      </div>
+      <div class="relative">
+        <!-- Ilustração simples de ponte em SVG -->
+        <div class="aspect-[4/3] rounded-2xl bg-white soft-shadow border border-black/5 grid place-items-center">
+          <svg class="w-[88%]" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg" aria-label="Ilustração de uma ponte">
+            <defs>
+              <linearGradient id="sky" x1="0" x2="0" y1="0" y2="1">
+                <stop offset="0%" stop-color="#e0f2fe"/>
+                <stop offset="100%" stop-color="#ffffff"/>
+              </linearGradient>
+            </defs>
+            <rect width="800" height="400" fill="url(#sky)"/>
+            <path d="M0 300 H800" stroke="#94a3b8" stroke-width="2"/>
+            <!-- pilares -->
+            <g stroke="#0a2540" stroke-width="4">
+              <line x1="150" y1="300" x2="150" y2="200"/>
+              <line x1="650" y1="300" x2="650" y2="200"/>
+            </g>
+            <!-- arco -->
+            <path d="M150 200 Q400 60 650 200" fill="none" stroke="#0a2540" stroke-width="6"/>
+            <!-- cabos -->
+            <g stroke="#0a2540" stroke-width="3">
+              <line x1="250" y1="230" x2="250" y2="300"/>
+              <line x1="350" y1="180" x2="350" y2="300"/>
+              <line x1="450" y1="180" x2="450" y2="300"/>
+              <line x1="550" y1="230" x2="550" y2="300"/>
+            </g>
+            <!-- tabuleiro -->
+            <rect x="80" y="290" width="640" height="16" rx="8" fill="#0a2540"/>
+            <!-- monograma SS -->
+            <g>
+              <circle cx="400" cy="140" r="36" fill="#0a2540"/>
+              <text x="400" y="150" font-size="28" text-anchor="middle" fill="#fff" font-family="Arial, Helvetica, sans-serif">SS</text>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROVA SOCIAL / BARRA -->
+  <section class="border-y border-black/5 bg-white/70">
+    <div class="container mx-auto px-4 py-8 grid md:grid-cols-3 gap-6 text-center">
+      <div>
+        <div class="text-3xl font-semibold text-[rgb(var(--ink))]">+35%</div>
+        <p class="text-neutral-600">margem média em 120 dias*</p>
+      </div>
+      <div>
+        <div class="text-3xl font-semibold text-[rgb(var(--ink))]">12 semanas</div>
+        <p class="text-neutral-600">da auditoria ao plano de execução</p>
+      </div>
+      <div>
+        <div class="text-3xl font-semibold text-[rgb(var(--ink))]">R$ 1→R$ 3</div>
+        <p class="text-neutral-600">cada real investido deve retornar três</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVIÇOS -->
+  <section id="servicos" class="container mx-auto px-4 py-16">
+    <div class="max-w-2xl">
+      <h2 class="text-3xl md:text-4xl font-semibold text-[rgb(var(--ink))]">O que eu faço</h2>
+      <p class="mt-3 text-neutral-700">Estratégia clara, números na mão e rituais de execução. A ponte não é só bonita — ela aguenta o tráfego.</p>
+    </div>
+    <div class="mt-10 grid md:grid-cols-3 gap-6">
+      <div class="p-6 bg-white rounded-2xl border border-black/5 soft-shadow">
+        <div class="text-sm font-medium text-sky-700 mb-2">Diagnóstico 360º</div>
+        <h3 class="font-semibold text-lg">Auditoria de valor</h3>
+        <p class="mt-2 text-neutral-700">Mapeio finanças, operações, marketing e pessoas. Identifico gargalos, riscos e alavancas de crescimento.</p>
+        <ul class="mt-3 text-sm text-neutral-600 list-disc pl-5">
+          <li>Raio-X financeiro e de margem</li>
+          <li>Pipeline comercial e CAC/LTV</li>
+          <li>Processos, SLAs e papéis</li>
+        </ul>
+      </div>
+      <div class="p-6 bg-white rounded-2xl border border-black/5 soft-shadow">
+        <div class="text-sm font-medium text-sky-700 mb-2">Plano & Prioridades</div>
+        <h3 class="font-semibold text-lg">Projeto da ponte</h3>
+        <p class="mt-2 text-neutral-700">Transformo metas em um plano trimestral com prioridades, metas de semana e donos claros.</p>
+        <ul class="mt-3 text-sm text-neutral-600 list-disc pl-5">
+          <li>OKRs e metas por célula</li>
+          <li>Roadmap por impacto x esforço</li>
+          <li>Indicadores e rituais</li>
+        </ul>
+      </div>
+      <div class="p-6 bg-white rounded-2xl border border-black/5 soft-shadow">
+        <div class="text-sm font-medium text-sky-700 mb-2">Execução guiada</div>
+        <h3 class="font-semibold text-lg">Travessia assistida</h3>
+        <p class="mt-2 text-neutral-700">Eu entro no dia a dia: sprints, cadência de vendas, margem por produto e decisão baseada em dados.</p>
+        <ul class="mt-3 text-sm text-neutral-600 list-disc pl-5">
+          <li>Reuniões táticas semanais</li>
+          <li>Gestão de caixa e estoque</li>
+          <li>Playbooks comerciais e CS</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- MÉTODO / ANALOGIA DA PONTE -->
+  <section id="metodo" class="bg-gradient-to-b from-white to-sky-50 border-y border-black/5">
+    <div class="container mx-auto px-4 py-16 grid md:grid-cols-2 gap-10 items-start">
+      <div>
+        <h2 class="text-3xl md:text-4xl font-semibold text-[rgb(var(--ink))]">A metáfora que guia meu trabalho</h2>
+        <p class="mt-4 text-neutral-700">Toda empresa tem duas margens: <strong>a margem de agora</strong> e <strong>a margem que deseja alcançar</strong>. Entre elas, existe um vão — riscos, gargalos e incertezas. Meu trabalho é projetar a ponte e conduzir a travessia.</p>
+        <div class="mt-6 grid gap-4">
+          <div class="p-5 bg-white border border-black/5 rounded-xl"><strong>Fundação</strong>: caixa, margem e oferta. Sem base sólida, qualquer ponte cede.</div>
+          <div class="p-5 bg-white border border-black/5 rounded-xl"><strong>Estrutura</strong>: processos enxutos, cargos claros, metas visíveis. Aqui a carga é distribuída.</div>
+          <div class="p-5 bg-white border border-black/5 rounded-xl"><strong>Tabuleiro</strong>: rotas de aquisição, conversão e retenção. Onde o tráfego — clientes e receita — realmente passa.</div>
+        </div>
+      </div>
+      <div class="p-6 bg-white rounded-2xl border border-black/5 soft-shadow">
+        <h3 class="font-semibold text-lg">Copys que movem (exemplos)</h3>
+        <ul class="mt-3 space-y-3 text-neutral-800">
+          <li>• <em>“Do faturamento ao lucro: pare de atravessar no improviso.”</em></li>
+          <li>• <em>“Sua empresa pode até vender; eu garanto que ela chegue inteira ao outro lado.”</em></li>
+          <li>• <em>“Pontes não se constroem com sorte. Construímos com números.”</em></li>
+          <li>• <em>“Três meses para ver caixa, margem e previsibilidade subindo — passo a passo.”</em></li>
+        </ul>
+        <a href="#contato" class="mt-6 inline-flex px-4 py-2 rounded-lg bg-[rgb(var(--ink))] text-white">Quero essas mensagens no meu contexto</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CASES / PROVAS -->
+  <section id="cases" class="container mx-auto px-4 py-16">
+    <div class="max-w-2xl">
+      <h2 class="text-3xl md:text-4xl font-semibold text-[rgb(var(--ink))]">Resultados recentes</h2>
+      <p class="mt-3 text-neutral-700">Sem pirotecnia. Dados e disciplina.</p>
+    </div>
+    <div class="mt-10 grid md:grid-cols-3 gap-6">
+      <article class="p-6 bg-white rounded-2xl border border-black/5 soft-shadow">
+        <div class="text-xs font-medium text-sky-700">Varejo • 10 lojas</div>
+        <h3 class="mt-1 font-semibold">Margem +28% e ruptura -35%</h3>
+        <p class="mt-2 text-neutral-700">Reprecificação por curva ABC, renegociação com fornecedores e rotina diária de caixa.</p>
+      </article>
+      <article class="p-6 bg-white rounded-2xl border border-black/5 soft-shadow">
+        <div class="text-xs font-medium text-sky-700">Indústria • Alimentos</div>
+        <h3 class="mt-1 font-semibold">Lead time -22% e OTIF 96%</h3>
+        <p class="mt-2 text-neutral-700">Kanban, padronização de setup e integração vendas→produção.</p>
+      </article>
+      <article class="p-6 bg-white rounded-2xl border border-black/5 soft-shadow">
+        <div class="text-xs font-medium text-sky-700">B2B • Tecnologia</div>
+        <h3 class="mt-1 font-semibold">CAC -18% e upsell +2.1x</h3>
+        <p class="mt-2 text-neutral-700">ICP, playbook comercial e rituais de forecast com funil confiável.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section id="sobre" class="bg-white border-y border-black/5">
+    <div class="container mx-auto px-4 py-16 grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <h2 class="text-3xl md:text-4xl font-semibold text-[rgb(var(--ink))]">Quem é a Suzam</h2>
+        <p class="mt-4 text-neutral-700">Consultora empresarial com foco em <strong>resultado financeiro</strong> e <strong>organização operacional</strong>. Mais de 10 anos trabalhando com PMEs e times em crescimento. Meu estilo é direto, com plano claro e acompanhamento próximo.</p>
+        <ul class="mt-4 text-neutral-800 space-y-2">
+          <li>• Finanças: precificação, margem e fluxo de caixa</li>
+          <li>• Operações: processos, SLAs e logística</li>
+          <li>• Comercial: funil, metas e previsibilidade</li>
+        </ul>
+        <a href="#contato" class="mt-6 inline-flex px-4 py-2 rounded-lg bg-[rgb(var(--ink))] text-white">Falar com a Suzam</a>
+      </div>
+      <div class="relative">
+        <div class="aspect-[3/4] rounded-2xl bg-gradient-to-b from-sky-100 to-white border border-black/5 soft-shadow grid place-items-center">
+          <div class="text-center">
+            <div class="mx-auto w-20 h-20 rounded-full bg-[rgb(var(--ink))] text-white grid place-items-center text-2xl font-bold">SS</div>
+            <p class="mt-3 text-neutral-700 max-w-xs mx-auto">Foto/ilustração da Suzam aqui (substitua por uma imagem real).</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATO / CTA -->
+  <section id="contato" class="container mx-auto px-4 py-16">
+    <div class="max-w-2xl">
+      <h2 class="text-3xl md:text-4xl font-semibold text-[rgb(var(--ink))]">Vamos atravessar juntos?</h2>
+      <p class="mt-3 text-neutral-700">Preencha o formulário e receba um diagnóstico inicial com rápidas alavancas de margem e execução.</p>
+    </div>
+    <div class="mt-8 grid md:grid-cols-3 gap-6">
+      <form class="md:col-span-2 p-6 bg-white rounded-2xl border border-black/5 soft-shadow" onsubmit="event.preventDefault(); alert('Obrigado! Responderemos em breve.'); this.reset();">
+        <div class="grid md:grid-cols-2 gap-4">
+          <label class="grid gap-1 text-sm">Nome
+            <input required type="text" class="px-3 py-2 rounded-lg border border-neutral-300 focus:outline-none focus:ring-2 focus:ring-sky-300" placeholder="Seu nome"/>
+          </label>
+          <label class="grid gap-1 text-sm">E-mail
+            <input required type="email" class="px-3 py-2 rounded-lg border border-neutral-300 focus:outline-none focus:ring-2 focus:ring-sky-300" placeholder="voce@empresa.com"/>
+          </label>
+        </div>
+        <label class="grid gap-1 text-sm mt-4">Empresa
+          <input type="text" class="px-3 py-2 rounded-lg border border-neutral-300 focus:outline-none focus:ring-2 focus:ring-sky-300" placeholder="Nome da empresa"/>
+        </label>
+        <label class="grid gap-1 text-sm mt-4">Qual é a margem hoje?
+          <input type="text" class="px-3 py-2 rounded-lg border border-neutral-300 focus:outline-none focus:ring-2 focus:ring-sky-300" placeholder="Ex.: 12%"/>
+        </label>
+        <label class="grid gap-1 text-sm mt-4">Descreva seu desafio em 2-3 linhas
+          <textarea rows="4" class="px-3 py-2 rounded-lg border border-neutral-300 focus:outline-none focus:ring-2 focus:ring-sky-300" placeholder="Caixa, margem, operação, comercial…"></textarea>
+        </label>
+        <button class="mt-6 w-full md:w-auto px-5 py-3 rounded-xl bg-[rgb(var(--ink))] text-white">Enviar diagnóstico</button>
+      </form>
+      <div class="p-6 bg-white rounded-2xl border border-black/5 soft-shadow">
+        <div class="text-sm font-medium text-sky-700">Contato direto</div>
+        <h3 class="mt-1 font-semibold">Fale com a Suzam</h3>
+        <ul class="mt-3 text-neutral-700 space-y-2">
+          <li>WhatsApp: <a class="text-sky-700 underline" href="https://wa.me/5599999999999" target="_blank" rel="noopener">(00) 99999-9999</a></li>
+          <li>E-mail: <a class="text-sky-700 underline" href="mailto:contato@suzamsimony.com">contato@suzamsimony.com</a></li>
+          <li>Agenda: <a class="text-sky-700 underline" href="#">Marcar reunião</a></li>
+        </ul>
+        <p class="mt-4 text-sm text-neutral-500">Tempo médio de resposta: em até 1 dia útil.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="border-t border-black/5 bg-white">
+    <div class="container mx-auto px-4 py-8 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <span class="grid place-items-center w-9 h-9 rounded-full bg-[rgb(var(--ink))] text-white font-bold">SS</span>
+        <span class="text-sm text-neutral-600">© <span id="year"></span> Suzam Simony. Todos os direitos reservados.</span>
+      </div>
+      <ul class="flex items-center gap-5 text-sm text-neutral-600">
+        <li><a href="#" class="hover:text-neutral-900">Privacidade</a></li>
+        <li><a href="#" class="hover:text-neutral-900">Termos</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('menuBtn').addEventListener('click', () => {
+      document.getElementById('mobileMenu').classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>
