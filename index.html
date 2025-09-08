@@ -13,10 +13,10 @@
         extend: {
           fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'] },
           colors: {
-            ink: '#3b2f2f', /* marrom escuro */
-            sand: '#f5f5dc', /* bege claro */
-            gold: '#d4af37', /* dourado */
-            accent: '#a67c52' /* marrom médio */
+            ink: '#3b2f2f',
+            sand: '#f5f5dc',
+            gold: '#d4af37',
+            accent: '#a67c52'
           }
         }
       }
@@ -48,7 +48,7 @@
   </header>
 
   <!-- HERO -->
-  <section class="relative bg-gradient-to-b from-[rgb(var(--sand))] to-white)">
+  <section class="relative bg-gradient-to-b from-[rgb(var(--sand))] to-white">
     <div class="container mx-auto px-6 py-20 grid md:grid-cols-2 gap-12 items-center">
       <div class="order-2 md:order-1 text-center md:text-left">
         <h1 class="text-5xl md:text-6xl font-bold leading-tight text-[rgb(var(--ink))]">
@@ -75,19 +75,21 @@
   <!-- NÚMEROS / PROVA SOCIAL -->
   <section class="border-y border-[rgb(var(--accent))]/30 bg-gradient-to-b from-white to-[rgb(var(--sand))]">
     <div class="container mx-auto px-4 py-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-4 text-center">
-      <div class="p-6 rounded-2xl bg-white soft-shadow hover:scale-105 transition-transform">
+      <div class="min-w-0 p-6 rounded-2xl bg-white soft-shadow hover:scale-105 transition-transform">
         <div class="text-[clamp(2rem,5vw,3.25rem)] font-extrabold text-[rgb(var(--ink))] leading-tight">+35%</div>
         <p class="mt-2 text-[rgb(var(--ink))]/70 text-base">margem média em 120 dias*</p>
       </div>
-      <div class="p-6 rounded-2xl bg-white soft-shadow hover:scale-105 transition-transform">
+      <div class="min-w-0 p-6 rounded-2xl bg-white soft-shadow hover:scale-105 transition-transform">
         <div class="text-[clamp(2rem,5vw,3.25rem)] font-extrabold text-[rgb(var(--ink))] leading-tight">12 semanas</div>
         <p class="mt-2 text-[rgb(var(--ink))]/70 text-base">da auditoria ao plano de execução</p>
       </div>
-      <div class="p-6 rounded-2xl bg-white soft-shadow hover:scale-105 transition-transform">
-        <div class="text-[clamp(2rem,5vw,3.25rem)] font-extrabold text-[rgb(var(--ink))] leading-tight whitespace-nowrap">R$ 1 → R$ 3</div>
+      <div class="min-w-0 p-6 rounded-2xl bg-white soft-shadow hover:scale-105 transition-transform">
+        <div class="text-[clamp(1.8rem,5vw,3.25rem)] font-extrabold text-[rgb(var(--ink))] leading-tight sm:whitespace-nowrap" style="text-wrap:balance">
+          R$ 1 → R$ 3
+        </div>
         <p class="mt-2 text-[rgb(var(--ink))]/70 text-base">cada real investido deve retornar três</p>
       </div>
-      <div class="p-6 rounded-2xl bg-white soft-shadow hover:scale-105 transition-transform">
+      <div class="min-w-0 p-6 rounded-2xl bg-white soft-shadow hover:scale-105 transition-transform">
         <div class="text-[clamp(2rem,5vw,3.25rem)] font-extrabold text-[rgb(var(--ink))] leading-tight">OTIF 95%+</div>
         <p class="mt-2 text-[rgb(var(--ink))]/70 text-base">entregas no prazo em projetos guiados</p>
       </div>
