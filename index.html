@@ -48,7 +48,7 @@
   </header>
 
   <!-- HERO -->
-  <section class="relative bg-gradient-to-b from-[rgb(var(--sand))] to-white">
+  <section class="relative bg-gradient-to-b from-[rgb(var(--sand))] to-white)">
     <div class="container mx-auto px-6 py-20 grid md:grid-cols-2 gap-12 items-center">
       <div class="order-2 md:order-1 text-center md:text-left">
         <h1 class="text-5xl md:text-6xl font-bold leading-tight text-[rgb(var(--ink))]">
@@ -128,20 +128,28 @@
     <div class="container mx-auto px-6 max-w-2xl">
       <h2 class="text-4xl md:text-5xl font-bold text-[rgb(var(--ink))]">Vamos atravessar juntos?</h2>
       <p class="mt-4 text-[rgb(var(--ink))]/80 text-lg">Preencha o formulário abaixo para receber um diagnóstico inicial sem custo.</p>
-      <form class="mt-10 p-8 bg-[rgb(var(--sand))] rounded-2xl border border-[rgb(var(--accent))]/40 soft-shadow text-left" onsubmit="event.preventDefault(); alert('Obrigado! Responderemos em breve.'); this.reset();">
+
+      <!-- Formspree -->
+      <form id="contatoForm"
+            action="https://formspree.io/f/xeolvdqd"
+            method="POST"
+            accept-charset="UTF-8"
+            class="mt-10 p-8 bg-[rgb(var(--sand))] rounded-2xl border border-[rgb(var(--accent))]/40 soft-shadow text-left">
+        <input type="hidden" name="_subject" value="Novo contato — Site Suzam Simony">
         <label class="block mb-4 text-sm font-medium">Nome
-          <input type="text" required class="mt-1 px-4 py-2 w-full rounded-lg border border-[rgb(var(--accent))] focus:ring-2 focus:ring-[rgb(var(--gold))]" />
+          <input name="name" type="text" required class="mt-1 px-4 py-2 w-full rounded-lg border border-[rgb(var(--accent))] focus:ring-2 focus:ring-[rgb(var(--gold))]" />
         </label>
         <label class="block mb-4 text-sm font-medium">E-mail
-          <input type="email" required class="mt-1 px-4 py-2 w-full rounded-lg border border-[rgb(var(--accent))] focus:ring-2 focus:ring-[rgb(var(--gold))]" />
+          <input name="email" type="email" required class="mt-1 px-4 py-2 w-full rounded-lg border border-[rgb(var(--accent))] focus:ring-2 focus:ring-[rgb(var(--gold))]" />
         </label>
         <label class="block mb-4 text-sm font-medium">Empresa
-          <input type="text" class="mt-1 px-4 py-2 w-full rounded-lg border border-[rgb(var(--accent))] focus:ring-2 focus:ring-[rgb(var(--gold))]" />
+          <input name="company" type="text" class="mt-1 px-4 py-2 w-full rounded-lg border border-[rgb(var(--accent))] focus:ring-2 focus:ring-[rgb(var(--gold))]" />
         </label>
         <label class="block mb-6 text-sm font-medium">Mensagem
-          <textarea rows="4" class="mt-1 px-4 py-2 w-full rounded-lg border border-[rgb(var(--accent))] focus:ring-2 focus:ring-[rgb(var(--gold))]"></textarea>
+          <textarea name="message" rows="4" class="mt-1 px-4 py-2 w-full rounded-lg border border-[rgb(var(--accent))] focus:ring-2 focus:ring-[rgb(var(--gold))]"></textarea>
         </label>
-        <button class="w-full px-6 py-3 bg-[rgb(var(--ink))] text-white font-semibold rounded-lg soft-shadow text-lg hover:bg-[rgb(var(--gold))] hover:text-[rgb(var(--ink))]">Enviar diagnóstico</button>
+        <button type="submit" class="w-full px-6 py-3 bg-[rgb(var(--ink))] text-white font-semibold rounded-lg soft-shadow text-lg hover:bg-[rgb(var(--gold))] hover:text-[rgb(var(--ink))]">Enviar diagnóstico</button>
+        <div id="form-status" class="mt-4 text-sm text-center"></div>
       </form>
     </div>
   </section>
@@ -155,6 +163,47 @@
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Envio com feedback usando Formspree
+    const form = document.getElementById('contatoForm');
+    const statusEl = document.getElementById('form-status');
+
+    form?.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const btn = form.querySelector('button[type="submit"]');
+      const prevLabel = btn?.innerHTML;
+      if (btn) { btn.disabled = true; btn.innerHTML = 'Enviando…'; }
+
+      const data = new FormData(form);
+      data.append('_origin', window.location.href);
+
+      try {
+        const resp = await fetch(form.action, {
+          method: 'POST',
+          body: data,
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (resp.ok) {
+          statusEl.className = 'mt-4 text-sm text-green-700 text-center';
+          statusEl.textContent = 'Obrigado! Recebi sua mensagem e retornarei em breve.';
+          form.reset();
+        } else {
+          let msg = 'Não foi possível enviar agora. Tente novamente.';
+          try {
+            const json = await resp.json();
+            if (json && json.errors) msg = json.errors.map(e => e.message).join(', ');
+          } catch(_) {}
+          statusEl.className = 'mt-4 text-sm text-red-700 text-center';
+          statusEl.textContent = msg;
+        }
+      } catch (err) {
+        statusEl.className = 'mt-4 text-sm text-red-700 text-center';
+        statusEl.textContent = 'Erro de rede. Verifique sua conexão e tente novamente.';
+      } finally {
+        if (btn) { btn.disabled = false; btn.innerHTML = prevLabel || 'Enviar diagnóstico'; }
+      }
+    });
   </script>
 </body>
 </html>
